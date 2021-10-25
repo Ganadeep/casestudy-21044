@@ -1,0 +1,44 @@
+TABLE1 : OWNER
+
+CREATE TABLE OWNER
+{
+O_ID    INT----------------> PRIMARY KEY,
+O_NAME  VARCHAR(50),
+DEPTNAME VARCHAR(50),
+}
+------------------------------------------------------------------------------
+TABLE2 : TASK_ASSIGN
+
+CREATE TABLE TASK_ASSIGN
+{
+TASK_ID     INT,--------------> PRIMARY KEY
+T.NAME      VARCHAR(50),
+T.DES        VARCHAR(50),
+T.STATUS     VARCHAR(50),
+PRIOR        VARCHAR(50),
+ASSIGN_DATE  DATE,
+COMP_DATE     DATE,
+O_ID         INT, ------------>foregin key
+}
+----------------------------------------------------------------------------------
+TABLE-3: EMPLOYEE
+
+CREATE TABLE EMPLOYEE
+{
+T.NAME        VARCHAR(100),
+EMPLOYEE_NAME VARCHAR(50), 
+E.ID          INT ,------------>primary key
+O_ID          INT,------------->foregin key
+T_ID          INT,-------------->foregin key
+}
+
+----------------------------------------------------------------------------------
+TABLE-4: NOTES
+CREATE TABLE NOTES
+{
+Note_ID        INT, -------------->primary key
+T_ID        INT, ----------------->foregin key
+O_ID        INT, ----------------->foregin key
+NOTES      STRING
+BOOKMARK   STRING  
+}
